@@ -2,7 +2,7 @@ import random
 
 def main():
     welcome()
-    print("HOUSE LAYOUT (as drawing??)\nYou are currently in the living room\n")
+    print("You enter the living room of the house. \nTime to start your investigration\n")
 
     class Ghost:
         def __init__(self, EMF, UVlight, temp, pic, name):
@@ -85,7 +85,14 @@ def welcome():
 
 # explains the rules of the game and how it is played
 def explain_game():
-    print("EXPLANATION\n")
+    print("Assistant to the Regional Exorcist is a game of paranormal investigation\n", 
+          "In the game you are hired by an exorcist to do the boring part of his job\n", 
+          "Figuring out what type of ghost is haunting a person's house!\n",
+          "Once he knows the type of ghost, the exorcism process becomes much easier\n\n", 
+          "You will figure out the type of ghost but conducting certain tests in each room of the house\n", 
+          "Different ghosts have different traits, from reducing the room's temperature to giving off strong EMF readings\n", 
+          "You can look up the traits of each ghost in your trusty Paranormal Encyclopedia\n", 
+          "Goodluck with your new job!\n")
     input('Press "Enter" to continue\n')
 
 
@@ -189,7 +196,7 @@ def change_rooms(current_room):
 
 # the choices you can make playing (Move, Ghost type checks, Consult diary, Guess)
 def playing(current_ghost, haunted_room):
-    time_left = 150
+    time_left = 140
     current_room = "living room"
 
     while time_left > 0:
@@ -234,7 +241,13 @@ def playing(current_ghost, haunted_room):
 
         # consult encyclopedia
         elif choice == "6":
-            print("ENCYCLOPEDIA")
+            print("Types of Ghosts:\n\n",
+                  "Wraith: Give off high EMG readings, and make the room around them freezing\n", 
+                  "Vengeful Spirit: Give off high EMF readings, and leave hand prints that can be seen under UV light\n", 
+                  "Demon: Give off high EMF readings, and can appear in photographs\n", 
+                  "Shade: Leave hand prints that can be seen under UV lights, and make the room around them freezing\n", 
+                  "Specter: Make the room around them freezing, and can appear in photographs\n", 
+                  "Poltergeist: Leave hand prints that can be seen under UV lights, and can appear in photographs\n")
             input('Press "Enter" to continue\n')
 
         # guess ghost
