@@ -113,7 +113,7 @@ def change_rooms(current_room):
                 break
 
             elif choice == "2":
-                current_room = "dining Room"
+                current_room = "dining room"
                 break
             
             elif choice == "3":
@@ -131,7 +131,7 @@ def change_rooms(current_room):
                 break
 
             elif choice == "2":
-                current_room = "living Room"
+                current_room = "living room"
                 break
 
             else:
@@ -184,7 +184,7 @@ def change_rooms(current_room):
                 break
 
             elif choice == "2":
-                current_room = "dining Room"
+                current_room = "dining room"
                 break
 
             else:
@@ -257,5 +257,8 @@ def playing(current_ghost, haunted_room):
 
         else:
             print("Please enter a valid choice")
+
+    if time_left == 0:
+        print("You are out of time!\n")
 
 main()
